@@ -20,7 +20,7 @@ _Any changes to any of the library files require the deletion of *SSerial2Mobile
 
 = The Phone and Carrier I chose and why =
 
-In the NYC,US ,area in which I live, popular stores like Radio Shack and Best Buy sell a Motorola C168i.  This phone cost ~$15 without a contract or even activating service.  Included with the phone is a SIM card.  This will allow the SIM to be regestered on the carrier's Web site where you can add money to the phone.
+In the NYC,US ,area in which I live, popular stores like Radio Shack and Best Buy sell a Motorola C168i.  This phone cost ~$15 without a contract or even activating service.  Included with the phone is a SIM card. Money can be added to this prepay account through the carrier's web page.
 
 I put $20 on the account for my tests. Each SMS or email cost $0.15.  An unlimited plan can be purched for ~$20/mo
 
