@@ -1,12 +1,9 @@
 #Attaching a Motorola C168i to an Arduino
-
+http://farm4.static.flickr.com/3254/2507585112_60cc338bfb_m.jpg
 = Making the cable =
 On the top of the C168i is a 3/32 mini stereo jack.  This is also can be used as "hands-free" connection , but not both at the same time.  These 3/32 jack are usualy stocked at Radio Shack [http://www.radioshack.com/product/index.jsp?productId=2062449&cp=&sr=1&origkw=3%2F32&kw=3%2F32&parentPage=search 3/32" Stereo Plug]
 
 The solder point on the 3/32 plug are very small so it is probaby a good idea to chack for shorts with a multimeter.  
 
 In the picture I have used Ethernet CAT5 wire.  This is really not the best choice as it is not flexible but I just happen to have a lot of it around.
-
-<a href="http://www.flickr.com/photos/rabbitnyc/2507585112/" title="Arduino sending SMS texts by rabbit_gvr, on Flickr"><img src="http://farm4.static.flickr.com/3254/2507585112_60cc338bfb_m.jpg" width="240" height="161" alt="Arduino sending SMS texts" /></a>
-
 
