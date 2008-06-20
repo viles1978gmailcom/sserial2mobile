@@ -10,6 +10,6 @@ In the picture I have used Ethernet CAT5 wire.  This is really not the best choi
 I will expand on this later but for now:
 
 ||Plug||function||prameter in code||Represented in code||
-||Sleeve|Ground|NA||NA||
+||Sleeve|Ground|NA|NA||
 ||Ring|Phone TX/Arduin RX|First Pram.|SSerial2Mobile(<here>,X)||
 ||Tip|Phone RX/Arduin TX|Secound Pram.|SSerial2Mobile(X,<here>)||
