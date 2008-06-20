@@ -10,6 +10,6 @@ In the picture I have used Ethernet CAT5 wire.  This is really not the best choi
 I will expand on this later but for now:
 
 ||*Plug*||*Function*||*Parameter in code*||*Represented in code*||
-||Sleeve||Ground||NA||NA||
-||Ring||Phone TX/Arduino RX||First Pram.||SSerial2Mobile(<here>,X)||
-||Tip||Phone RX/Arduino TX||Second Pram.||SSerial2Mobile(X,<here>)||
+||[http://en.wikipedia.org/wiki/TRS_connector#Tip.2Fring.2Fsleeve_terminology Sleeve]||Ground||NA||NA||
+||[http://en.wikipedia.org/wiki/TRS_connector#Tip.2Fring.2Fsleeve_terminology Ring]||Phone TX/Arduino RX||First Pram.||SSerial2Mobile(<here>,X)||
+||[http://en.wikipedia.org/wiki/TRS_connector#Tip.2Fring.2Fsleeve_terminology Tip]||Phone RX/Arduino TX||Second Pram.||SSerial2Mobile(X,<here>)||
