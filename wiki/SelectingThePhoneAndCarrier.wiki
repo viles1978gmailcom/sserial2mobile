@@ -6,12 +6,16 @@ This library was written with all the AT+ command stored in header file.  This s
 = Phone =
 *c168i.h*
 
-The command for sending the SMS and emails is roughly the same on most phones.  In many cases these command should not have to be altered should not have to be altered.  
+The command for sending the SMS and emails is roughly the same on most phones.  In many cases these command should not have to be altered should not have to be altered.   
+
+_Any changes to any of the library files require the deletion of *SSerial2Mobile.o* and a restart of the Arduino IDE to force a recompile of the library_
 
 = Carrier =
 *att.h*
 
-The carrier header file lists the number that the specific carrier uses to forward emails to the carrier's email gatway.  This number *will* need to be change to be correct for the specific carrier
+The carrier header file lists the number that the specific carrier uses to forward emails to the carrier's email gateway.  This number *will* need to be change to be correct for the specific carrier.  Unless you use the same carrier I chose.
+
+_Any changes to any of the library files require the deletion of *SSerial2Mobile.o* and a restart of the Arduino IDE to force a recompile of the library_
 
 
 = The Phone and Carrier I chose and why =
