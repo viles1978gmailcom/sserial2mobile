@@ -1,0 +1,16 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+This library was written with all the AT+ command stored in header file.  This should make it relitivly easy to get the libaray to would with other phones. 
+== Phone ==
+The command for sending the SMS and emails is roughly the same on most phones.  In many cases the phone library should not have to be altered.  
+
+= Carrier =
+The carrier header file lists the number that the specific carrier uses to forward emails to the carrier's email gatway.  This number *will* need to be change to be correct for the specific carrier
+
+= The Phone and Carrir I chose and why =
+_Prices are approximate as of Spring/summer 2008 in NYC,US_
+In the NYC,US area in witch I live popular stores like Radio Shack and Best Buy sell a Motorola C168i.  This phone cost ~$15 with out a contract or even activating service.  Included with the phone is a SIM card.  This will allow the SIM to be regestered on the carrier's Web site where you can add money to the phone.
+
+I put $20 on the account for my tests. Each SMS or email cost $0.15.  An unlimited plan can be purched for ~$20/mo
