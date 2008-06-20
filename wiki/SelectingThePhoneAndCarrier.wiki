@@ -4,10 +4,13 @@
 This library was written with all the AT+ command stored in header file.  This should make it relatively easy to get the library to work with other phones. 
 
 = Phone =
-The command for sending the SMS and emails is roughly the same on most phones.  In many cases the phone library should not have to be altered.  
+*c168i.h*
+The command for sending the SMS and emails is roughly the same on most phones.  In many cases these command should not have to be altered should not have to be altered.  
 
 = Carrier =
+*att.h*
 The carrier header file lists the number that the specific carrier uses to forward emails to the carrier's email gatway.  This number *will* need to be change to be correct for the specific carrier
+
 
 = The Phone and Carrier I chose and why =
 _Prices are approximate as of Spring/summer 2008 in NYC,US_
