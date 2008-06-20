@@ -6,3 +6,10 @@ On the top of the C168i is a 3/32 mini stereo jack.  This is also can be used as
 The solder point on the 3/32 plug are very small so it is probaby a good idea to chack for shorts with a multimeter.  
 
 In the picture I have used Ethernet CAT5 wire.  This is really not the best choice as it is not flexible but I just happen to have a lot of it around.
+
+I will expand on this later but for now:
+
+||Plug||function||prameter in code||Represented in code||
+||Sleeve|Ground|NA||NA||
+||Ring|Phone TX/Arduin RX|First Pram.|SSerial2Mobile(<here>,X)||
+||Tip|Phone RX/Arduin TX|Secound Pram.|SSerial2Mobile(X,<here>)||
