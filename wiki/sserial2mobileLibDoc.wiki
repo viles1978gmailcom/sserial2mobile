@@ -1,0 +1,58 @@
+#sserial2mobile method libary
+=SSerial2Mobile(rxPin, txPin)=
+==Description==
+A call to SSerial2Mobile(rxPin, txPin) creates a new SSerial2Mobile object, whose name you need to provide as in the example below. 
+==Parameters==
+rxPin: the pin on which to receive serial data
+
+txPin: the pin on which to transmit serial data 
+==Example==
+rxPin: the pin on which to receive serial data
+
+txPin: the pin on which to transmit serial data
+
+Example
+
+#define rxPin 2
+#define txPin 3
+
+// set up a new serial port
+SSerial2Mobile phone = SSerial2Mobile(rxPin, txPin);
+=SSerial2Mobile: println(const char[])=
+==Description==
+Prints data to the transmit pin of the software serial port, followed by a carriage return and line feed. Works the same as the Serial.println() function. 
+
+This is if you know what AT+ command you want to send
+==Parameters==
+.println(str) if str is a string or an array of chars, prints str an ASCII string.
+==Example==
+phone.("AT+");
+=SSerial2Mobile: off(void)=
+==Description==
+Turn the phone off.  Saves Battery a LOT
+==Parameters==
+NONE
+==Example==
+phone.off();
+
+
+==
+
+=SSerial2Mobile: =
+==Description==
+==Parameters==
+==Example==
+
+
+
+           void reset(void);
+           void sendTxt(const char number[],const char number[]);
+           void sendEmail(const char emailAddr[],const char msg[]);
+
+
+= Details =
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
