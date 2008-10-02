@@ -16,15 +16,6 @@ txPin: the pin on which to transmit serial data
 SSerial2Mobile phone = SSerial2Mobile(rxPin, txPin);
 }}}
 ----
-=SSerial2Mobile: println(const char[])=
-==Description==
-Prints data to the transmit pin of the software serial port, followed by a carriage return and line feed. Works the same as the Serial.println() function. 
-
-This is if you know what AT+ command you want to send
-==Parameters==
-.println(str) if str is a string or an array of chars, prints str an ASCII string.
-==Example==
-phone.("AT+");
 =SSerial2Mobile: off(void)=
 ==Description==
 Turn the phone's transmitter off.  Saves Battery
@@ -74,7 +65,17 @@ const char number[]: The email address
 const char msg[]): message.  ( MAX 160 char. as per SMS spec.)
 ==Example==
 phone.sendEmail("sserial2mobile@example.com", "Lib email test1");
+----
+=SSerial2Mobile: println(const char[])=
+==Description==
+Prints data to the transmit pin of the software serial port, followed by a carriage return and line feed. Works the same as the Serial.println() function. 
 
+This is if you know what AT+ command you want to send
+==Parameters==
+.println(str) if str is a string or an array of chars, prints str an ASCII string.
+==Example==
+phone.println("AT+");
+----
 
 
 
