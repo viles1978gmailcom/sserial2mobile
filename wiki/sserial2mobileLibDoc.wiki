@@ -1,4 +1,4 @@
-#sserial2mobile method libary
+#summary sserial2mobile method libary
 
 =SSerial2Mobile(rxPin, txPin)=
 ==Description==
