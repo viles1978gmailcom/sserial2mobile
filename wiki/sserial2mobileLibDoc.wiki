@@ -86,7 +86,7 @@ phone.println("AT+");
 ==Description==
 ==Parameters==
 ==Example==
-
+----
 =SSerial2Mobile: wait4OK=
 ==Description==
 ==Parameters==
