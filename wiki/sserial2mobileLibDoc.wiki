@@ -37,7 +37,7 @@ phone.off();
 ----
 =SSerial2Mobile: on(void)=
 ==Description==
-Turns the phone's transmitter on.  On some phone this is actually a reset.  This should be hidden from the user of the library in the header files that contain the AT commands for each function.
+Turns the phone's transmitter on.  On some phone this is actually a reset.  This should be hidden from the user of the library in the header files that contain the AT commands for each function.  see reset below
 ==Parameters==
 None
 ==Example==
@@ -47,7 +47,7 @@ phone.on();
 ----
 =SSerial2Mobile: reset(void)=
 ==Description==
-Resets the phone.
+Resets the phone.  This can take a looooong time.  how long does the phone take to boot? My phone takes about 10 seconds
 ==Parameters==
 NONE
 ==Example==
