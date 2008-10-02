@@ -46,7 +46,7 @@ NONE
 phone.reset();
 }}}
 ----
-=SSerial2Mobile: sendTxt(const char number[],const char number[]);=
+=SSerial2Mobile: sendTxt(const char number[],const char msg[]);=
 ==Description==
 Sends a txt (SMS) message to another phone
 ==Parameters==
