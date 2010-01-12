@@ -89,6 +89,8 @@ NONE
 =SSerial2Mobile: rssi=
 ==Description==
 [http://en.wikipedia.org/wiki/RSSI]
+
+This should be about >=5 or so to send a message
 ==Parameters==
 ==Example==
   Serial.print("RSSI: ");
