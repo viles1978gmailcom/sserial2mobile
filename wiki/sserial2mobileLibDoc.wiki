@@ -76,9 +76,28 @@ This is if you know what AT+ command you want to send
 ==Example==
 phone.println("AT+");
 ----
-
-
-
+=SSerial2Mobile: batt=
+==Description==
+As percent charged
+==Parameters==
+NONE
+==Example==
+  Serial.print("Batt: ");
+  Serial.print(phone.batt());
+  Serial.println("%");
+----
+=SSerial2Mobile: rssi=
+==Description==
+[http://en.wikipedia.org/wiki/RSSI]
+==Parameters==
+==Example==
+  Serial.print("RSSI: ");
+  Serial.println(phone.rssi());
+----
+----
+----
+----
+----
 
 =NOT YET IMPLEMENTED=
 
@@ -89,19 +108,6 @@ phone.println("AT+");
 ----
 =SSerial2Mobile: wait4OK=
 ==Description==
-==Parameters==
-==Example==
-----
-=SSerial2Mobile: batt=
-==Description==
-As percent charged
-==Parameters==
-NONE
-==Example==
-----
-=SSerial2Mobile: rssi=
-==Description==
-[http://en.wikipedia.org/wiki/RSSI]
 ==Parameters==
 ==Example==
 ----
