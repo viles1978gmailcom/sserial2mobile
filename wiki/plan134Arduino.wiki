@@ -61,25 +61,38 @@ p13.setLocation(-64.375, 45.8958, 20); // Sackville, New Brunswick Canada
 ==Description==
 This is how the [http://en.wikipedia.org/wiki/Orbital_elements orbital elements] of the satellite is set. Satellites are small things ( think compact car sized) moving around in a circle bigger the the diameter of the earth.  This means no matter how accurate the calculation are the tinniest of bit of imprecision in the math with cause the calculation to become less accurate over time.  Also, every other object in the universe is creating a gravitational pull on it.  This along with a host of other factors further adds error to the calculations.
 
-So this means that very recent orbital elements are required (no more then a week old).  These are freely distributed by [http://en.wikipedia.org/wiki/NORAD NORAD] and can be found for different types of space objects on the internet.  These can be easily found but doing an internet search for TLE.
+So this means that very recent orbital elements are required that have the current corrections (your TLE data should be no more then a week old).  These are freely distributed by [http://en.wikipedia.org/wiki/NORAD NORAD] and can be found for different types of space objects on the internet.  These can be easily found but doing an internet search for TLE.
 == Mapping the TLE to this function prams ==
 The TLEs (or two line elements) are actually generally 3 line with the top most one being the common name of the object.  The 2 lines of data contain specific information in specific columns of the line.  Below the line and the columns for each parameter is specified. You don't need to know what these mean but there are a of good resources on the web as well as the [http://www.arrl.org/shop/The-ARRL-Satellite-Handbook/ ARRL Satellite handbook]
 
-_Note: The person writing portions this doc is different from the person who wrote the library.  I can not begin to understand the math but I have no problems using the library. I just plug in the numbers form the TLE and use the results._
+Example TLE for the Space station
+{{{
+ISS (ZARYA)
+1 25544U 98067A   08264.51782528 -.00002182  00000-0 -11606-4 0  2927
+2 25544  51.6416 247.4627 0006703 130.5360 325.0288 15.72125391563537
+}}}
+
+_Note: The person writing portions of this doc is different from the person who wrote the library.  I can not begin to understand the math but I have no problems using the library. I just plug in the numbers form the TLE and use the results._
 
 ==Parameters==
 double YE_in:  The year the TLE was generated.  The TLE only has the list 2 digits then need to be a 4 digit year.  *Line1 cols 19-20*
 
-double TE_in: The day and fraction of the day the TLE was generated *Line1 cols 21-32*
+||double TE_in: The day and fraction of the day the TLE was generated*Line1 cols 21-32*
 
 double IN_in: Inclination [Degrees] *Line 2 Cols 09-16*
 
-double RA_in,
-double EC_in:
-double WP_in:
+double RA_in: R.A.A.N.     *Line 2 Cols deg 18-25*
+
+double EC_in: Eccentricity *Line 2 Cols deg 27-33*
+
+double WP_in: 
+
 double MA_in:
+
 double MM_in:
+
 double M2_in:
+
 double RV_in:
 
 double ALON_in: SET to 0   _This is an artifact the the math algorithm.  it is not currently used_ 
@@ -89,23 +102,12 @@ double ALON_in: SET to 0   _This is an artifact the the math algorithm.  it is n
 
 
 ==Return Value==
+none
 ===Example===
 {{{
- 
+ p13.setElements(2009, 232.55636497, 98.0531, 238.4104, 83652*1.0e-7, 290.6047, 68.6188, 14.406497342, -0.00000001, 27022, 180.0); // keps for AO-51
 }}}
-----
-
-
-
-int getDoppler(unsigned long freq);
-	
-
-void calculate(void);
-void printdata(void);
-
-void setFrequency(unsigned long rx_frequency, unsigned long tx_frequency);
-
-=SSerial2Mobile(rxPin, txPin)=
+=void setFrequency(unsigned long rx_frequency, unsigned long tx_frequency)=
 ==Description==
 ==Parameters==
 ==Return Value==
@@ -113,15 +115,43 @@ void setFrequency(unsigned long rx_frequency, unsigned long tx_frequency);
 {{{
 }}}
 ----
-=SSerial2Mobile(rxPin, txPin)=
+
+=void calculate(void)=
 ==Description==
+This causes the calculation to be run.  this will take about 12ms on an Arduino Diecimila.  This does not produce any output.  the variables must  be called directly 
 ==Parameters==
+none
+==Return Value==
+none
 ===Example===
 {{{
+p13.calculate();
 }}}
-----=SSerial2Mobile(rxPin, txPin)=
+----
+
+=void printdata(void);=
+==Description==
+This will generate a brief but human readable output to the Arduino's serial output.  This is probably most useful for testing
+==Parameters==
+none
+==Return Value==
+non
+===Example===
+{{{
+p13.printdata();
+}}}
+==The output will look something like this:==
+{{{
+AZ:57.08 EL: 3.98 RX: 435301705 TX: 145919429 Sat Lat: 53.87 Sat Lon.: 330.17 RR: -1.18
+}}}
+----
+
+
+----
+=int getDoppler(unsigned long freq)=
 ==Description==
 ==Parameters==
+==Return Value==
 ===Example===
 {{{
 }}}
