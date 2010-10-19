@@ -1,0 +1,101 @@
+#Documentation and samples for plan13.
+
+= Introduction =
+
+Plan13.h - Will cacluate the curent location of many types of spacecrafts in an orbit (satlite/space stations/etc.) relitive to a specfic location on earth if provided with:
+		 * The specfic loaction ( longitutide and latitue)
+		 * The time ( time and Date)
+		 * A recent descirtipn of the satilite path in space (called a TLE)
+		 
+		The libary will return the Azimuth and elevation where the spacecraft can be found.  Azmouth is direction(think compass) and elevation (degrese about the horizon (If I am looking at the horizan that is 0 degrees and if I am looking stright up that is 90{eleivation will never be more then 90))).
+
+		This means an Azimuth of 180 degreese and 45 degree elevation would mean the object that is being tracked is directly south and 45 degreese above the horizon.  
+
+This lib also calculates the dopler shif in the reciving and trandmithign of the frequencizes use with the spacecraft. and some other usefull stuff.
+
+_Please forgive the use of "bird" the word satellite is just too long to keep typing :)_
+
+=void setTime(int yearIn, int monthIn, int mDayIn, int hourIn, int minIn, int secIn)=
+==Description==
+This set the [http://en.wikipedia.org/wiki/Coordinated_Universal_Time UTC] time] for the tracking. This can be in the future.  The calculated output with be the position of the bird at this time.  If looking for the when the bird will be visible (to the radio)  you probably want to calculates time into the future until you get an elevation of at least 5 degrees above the horizon. (because it is not feasible to transmit through the earth.) 
+
+For real-time tracking the value will need to be continuously updated and the `calculate()` function will need to be recalled each time.
+ ==Parameters==
+
+int yearIn: the year in 4 digits e.g. `2010`
+
+int monthIn: The month in 1 or 2 digits 
+
+int mDayIn: The month in 1 or 2 digits
+
+int hourIn: The month in 1 or 2 digits
+
+int minIn:The month in 1 or 2 digits
+
+int secIn:The month in 1 or 2 digits
+==Return Value==
+none
+===Example===
+{{{
+p13.setTime(2009, 10, 1, 19, 5, 0); //Oct 1, 2009 19:05:00 UTC
+}}}
+----
+
+=void setLocation(double lon, double lat, int height)=
+==Description==
+This is the location on Earth from where the bird with be observed.  Generally this is gonna be were your standing.  For real-time tracking the value will need to be continuously updated and the `calculate()` function will need to be recalled each time.
+==Parameters==
+double lon: decimal degrees negative for west hemisphere
+
+double lat: decimal degrees positive for north hemisphere
+
+int height: in meters
+==Return Value==
+none
+===Example===
+{{{
+p13.setLocation(-64.375, 45.8958, 20); // Sackville, New Brunswick Canada
+}}}
+----
+=void setElements(double YE_in, double TE_in, double IN_in, double RA_in, double EC_in, double WP_in, double MA_in, double MM_in, double M2_in, double RV_in, double ALON_in )=
+==Description==
+This is how the [http://en.wikipedia.org/wiki/Orbital_elements orbital elements] of the satellite is set.  
+
+==Parameters==
+==Return Value==
+===Example===
+{{{
+}}}
+----
+
+
+
+int getDoppler(unsigned long freq);
+	
+
+void calculate(void);
+void printdata(void);
+
+void setFrequency(unsigned long rx_frequency, unsigned long tx_frequency);
+
+=SSerial2Mobile(rxPin, txPin)=
+==Description==
+==Parameters==
+==Return Value==
+===Example===
+{{{
+}}}
+----
+=SSerial2Mobile(rxPin, txPin)=
+==Description==
+==Parameters==
+===Example===
+{{{
+}}}
+----=SSerial2Mobile(rxPin, txPin)=
+==Description==
+==Parameters==
+===Example===
+{{{
+}}}
+----
