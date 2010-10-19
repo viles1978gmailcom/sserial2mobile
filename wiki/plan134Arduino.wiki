@@ -3,7 +3,7 @@
 = Introduction =
 
 Plan13.h - Will cacluate the curent location of many types of spacecrafts in an orbit (satlite/space stations/etc.) relitive to a specfic location on earth if provided with:
-		 * The specfic loaction ( longitutide and latitue)
+		 * The specfic location ( longitutide and latitue)
 		 * The time ( time and Date)
 		 * A recent descirtipn of the satilite path in space (called a TLE)
 		 
@@ -11,7 +11,7 @@ Plan13.h - Will cacluate the curent location of many types of spacecrafts in an 
 
 		This means an Azimuth of 180 degreese and 45 degree elevation would mean the object that is being tracked is directly south and 45 degreese above the horizon.  
 
-This lib also calculates the dopler shif in the reciving and trandmithign of the frequencizes use with the spacecraft. and some other usefull stuff.
+This library also calculates the dopler shift in the reciving and transmitting of the frequencies used with the spacecraft.
 
 _Please forgive the use of "bird" the word satellite is just too long to keep typing :)_
 
