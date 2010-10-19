@@ -15,6 +15,42 @@ This library also calculates the dopler shift in the reciving and transmitting o
 
 _Please forgive the use of "bird" the word satellite is just too long to keep typing :)_
 
+=Example of use=
+{{{
+#include <Plan13.h>  //load satellite tracking library
+Plan13 p13;                  //create an instance of a satellite tracking object
+
+void setup () {
+  p13.setFrequency(435300000, 145920000);//AO-51  frequency
+
+  p13.setLocation(-64.375, 45.8958, 20); // Sackville, NB the location that will be tracked form
+
+Serial.begin(38400);  set up the outgoing serial port on the Arduino
+
+}
+void loop() { 
+  p13.setTime(2009, 10, 1, 19, 5, 0); //Oct 1, 2009 19:05:00 UTC
+
+  p13.setElements(2009, 232.55636497, 98.0531, 238.4104, 83652*1.0e-7, 290.6047, 68.6188, 14.406497342, -0.00000001, 27022, 180.0); // keps for AO-51 //readElements();
+  
+  p13.calculate(); //crunch the numbers
+  
+  p13.printdata();  // print the location of the satellite 
+
+ exit(1);         //end the program.  Just because we are neat programers
+}
+}}}
+==The output will be like this:==
+{{{
+AZ:57.08 EL: 3.98 RX: 435301705 TX: 145919429 Sat Lat: 53.87 Sat Lon.: 330.17 RR: -1.18
+}}}
+
+
+So if you were in New Brunswick Canada on Oct 10, 2009 at 19:05 UTC and looked a little East of North East (57.8deg) just at the horizon (3.98 deg).  Theoretically you would be looking at the satellite.  You directional radio antenna will detect it.
+
+
+
+----
 =void setTime(int yearIn, int monthIn, int mDayIn, int hourIn, int minIn, int secIn)=
 ==Description==
 This set the [http://en.wikipedia.org/wiki/Coordinated_Universal_Time UTC] time] for the tracking. This can be in the future.  The calculated output with be the position of the bird at this time.  If looking for the when the bird will be visible (to the radio)  you probably want to calculates time into the future until you get an elevation of at least 5 degrees above the horizon. (because it is not feasible to transmit through the earth.) 
